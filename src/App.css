@@ -1,0 +1,56 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: white;
+}
+.wrapper{
+  width: 400px;
+  margin: 0 auto;
+  background-color: #E87C86;
+}
+.header{
+  padding-top: 10px;
+  width: 80%;
+  margin: 0 auto;
+  
+}
+.main{
+  width: 100%;
+}
+.container{
+  margin: 0 auto;
+  width: 80%;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+  background-color: #a7585f;
+  margin-bottom: 5px;
+  padding: 0 20px;
+}
+.action{ 
+  display: flex;
+  gap: 10px; 
+  align-items: center;
+}
+
+.input-add{
+  padding-bottom: 10px;
+}
+.input-add input{
+  height: 30px;
+  width: 220px;
+}
+.input-add button{
+  height: 35px;
+  background-color: #E87C86;
+  border: 1px solid white;
+  color: white;
+ 
+}
+.text{
+  /* chu gach ngang
+   */
+  text-decoration: line-through;
+}
