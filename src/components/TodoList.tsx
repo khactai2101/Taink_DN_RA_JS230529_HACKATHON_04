@@ -44,6 +44,17 @@ const TodoList: React.FC = () => {
     (event.target as HTMLFormElement).reset();
   };
 
+  //thay doi chu~ gach chan
+  const changeStatus = (id: number) => {
+    const todoToUpdate = todos.find((todo) => todo.id === id);
+    if (todoToUpdate) {
+      const updatedTodos = todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      );
+      setTodos(updatedTodos);
+    }
+  };
+
   return (
     <div className="wrapper">
       <div className="header">
@@ -57,7 +68,7 @@ const TodoList: React.FC = () => {
           <div key={todo.id} className="item container">
             <p className={todo.completed ? "text" : ""}>{todo.text}</p>
             <div className="action">
-              <input type="checkbox" />
+              <input type="checkbox" onClick={() => changeStatus(todo.id)} />
               <BsTrash
                 className="icon-trash"
                 onClick={() => handleDeleteTodo(todo.id)}
